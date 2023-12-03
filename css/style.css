@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+  .cont{
+    width: 80%;
+    margin: auto;
+  }
+  .cont h2{
+    margin-top: 50px;
+    text-align: center;
+  }
+  .cont span{
+    color: red;
+  }
+.container { 
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    gap: 1em 1em;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "pizza pizza pizza pizza beef beef beef beef burger burger burger burger"
+      "pizza pizza pizza pizza beef beef beef beef burger burger burger burger"
+      "pizza pizza pizza pizza beef beef beef beef burger burger burger burger"
+      "pizza pizza pizza pizza beef beef beef beef burger burger burger burger"
+      "Levitation-pizza Levitation-pizza Levitation-pizza Levitation-pizza beef beef beef beef Crispy Crispy Crispy Crispy"
+      "Levitation-pizza Levitation-pizza Levitation-pizza Levitation-pizza beef beef beef beef Crispy Crispy Crispy Crispy"
+      "Levitation-pizza Levitation-pizza Levitation-pizza Levitation-pizza beef beef beef beef Crispy Crispy Crispy Crispy"
+      "Levitation-pizza Levitation-pizza Levitation-pizza Levitation-pizza beef beef beef beef Crispy Crispy Crispy Crispy"
+      "Levitation-pizza Levitation-pizza Levitation-pizza Levitation-pizza beef beef beef beef kebab kebab kebab kebab"
+      "Levitation-pizza Levitation-pizza Levitation-pizza Levitation-pizza Frittata Frittata Frittata Frittata kebab kebab kebab kebab"
+      "Levitation-pizza Levitation-pizza Levitation-pizza Levitation-pizza Frittata Frittata Frittata Frittata kebab kebab kebab kebab"
+      "Levitation-pizza Levitation-pizza Levitation-pizza Levitation-pizza Frittata Frittata Frittata Frittata kebab kebab kebab kebab"
+      "Levitation-pizza Levitation-pizza Levitation-pizza Levitation-pizza Frittata Frittata Frittata Frittata . . . ."
+      ". . . . Frittata Frittata Frittata Frittata . . . .";
+
+    
+  }
+  
+  .pizza { 
+    position: relative;
+    overflow: hidden;
+    grid-area: pizza; 
+    transition: all .5s;
+  }
+  
+  
+  .container img {
+    height: 100%;
+    width: 100%;
+    transition: all 1s;
+
+  }
+
+  .container .layer {
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    transition: all .5s;
+  
+  }
+  .pizza:hover .layer{
+    opacity: 1;
+    top: 0;
+
+  }
+  .pizza:hover img{
+    transform: scale(1.2);
+  }
+
+
+
+
+  .beef {
+    
+    grid-area: beef;
+    position: relative;
+    overflow: hidden;
+    transition: all .08s;  
+  }
+
+
+  .beef:hover .layer{
+    opacity: 1;
+    top: 0;
+
+  }
+  .beef:hover img{
+    transform: scale(1.2);
+  }
+  
+
+
+  .burger {
+    grid-area: burger; 
+    position: relative;
+    overflow: hidden;
+  }
+
+  .burger:hover .layer{
+    opacity: 1;
+    top: 0;
+  }
+  .burger:hover img{
+    transform: scale(1.2);
+  }
+
+  .Crispy { 
+    grid-area: Crispy;
+    position: relative;
+    overflow: hidden;
+  }
+  .Crispy:hover .layer{
+    opacity: 1;
+    top: 0;
+  }
+  .Crispy:hover img{
+    transform: scale(1.2);
+  }
+  
+  .kebab { 
+    position: relative;
+    overflow: hidden;
+    grid-area: kebab;
+   }
+
+  .kebab:hover .layer{
+    opacity: 1;
+    top: 0;
+  }
+  .kebab:hover img{
+    transform: scale(1.2);
+  }
+  
+  .Frittata { 
+    position: relative;
+    overflow: hidden;
+    grid-area: Frittata; 
+  }
+  .Frittata:hover .layer{
+    opacity: 1;
+    top: 0;
+  }
+  .Frittata:hover img{
+    transform: scale(1.2);
+  }
+  
+  .Levitation-pizza { 
+    position: relative;
+    overflow: hidden;
+    grid-area: Levitation-pizza; 
+  }
+  .Levitation-pizza:hover .layer{
+    opacity: 1;
+    top: 0;
+  }
+  .Levitation-pizza:hover img{
+    transform: scale(1.2);
+  }
